@@ -2364,6 +2364,19 @@ function calculateInflationAdjustedValue(amount, year) {
             }
         }
 
+                /* Style for result */
+        #result {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            color: #333;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: none;
+        }
+
+
     </style>
 </head>
 <body>
@@ -2455,6 +2468,7 @@ function calculateInflationAdjustedValue(amount, year) {
 
             });
             document.getElementById('result').innerHTML = `Današnja vrednost: ≈ ${formatter.format(adjustedValue)}`;
+            document.getElementById('result').style.display = 'block'; 
         });
     </script>
 </body>
