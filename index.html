@@ -34,6 +34,12 @@ let cpiData = {
     "2023": 304.127
 };
 
+function convertDollarToEuro(dollarAmount) {
+  const conversionRate = 0.91;
+  const euroAmount = dollarAmount * conversionRate;
+  return euroAmount;
+}
+
 function removeCommas(str) {
   return str.replace(/,/g, "");
 }
@@ -2177,231 +2183,91 @@ function calculateInflationAdjustedValue(amount, year) {
         },
         "9": {
             "USD": 832.5,
-            "CHF": 554.81,
-            "GBP": 1.369,
-            "DEM": 459.38,
-            "ATS": 65.26,
-            "ITL": 63.5
         },
         "10": {
             "USD": 896.4,
-            "CHF": 599.78,
-            "GBP": 1.487,
-            "DEM": 497.68,
-            "ATS": 70.64,
-            "ITL": 68.8
         },
         "11": {
             "USD": 1136,
-            "CHF": 822.54,
-            "GBP": 2.017,
-            "DEM": 675.99,
-            "ATS": 96.02,
-            "ITL": 91.69
         },
         "12": {
             "USD": 1263,
-            "CHF": 950.17,
-            "GBP": 2.31,
-            "DEM": 773.7,
-            "ATS": 109.9,
-            "ITL": 104.86
         }
     },
     "1988": {
         "1": {
             "USD": 1274,
-            "CHF": 950.77,
-            "GBP": 2.302,
-            "DEM": 773.79,
-            "ATS": 109.96,
-            "ITL": 105.13
         },
         "2": {
             "USD": 1343,
-            "CHF": 965.01,
-            "GBP": 2.357,
-            "DEM": 791.28,
-            "ATS": 112.69,
-            "ITL": 107.43
         },
         "3": {
             "USD": 1386,
-            "CHF": 1,
-            "GBP": 2.537,
-            "DEM": 826.51,
-            "ATS": 117.66,
-            "ITL": 111.59
         },
         "4": {
             "USD": 1473,
-            "CHF": 1.067,
-            "GBP": 2.767,
-            "DEM": 882.61,
-            "ATS": 125.52,
-            "ITL": 118.75
         },
         "5": {
             "USD": 1576,
-            "CHF": 1.119,
-            "GBP": 2.946,
-            "DEM": 932.07,
-            "ATS": 132.54,
-            "ITL": 125.24
         },
         "6": {
             "USD": 2126,
-            "CHF": 1.455,
-            "GBP": 3.786,
-            "DEM": 1.21,
-            "ATS": 172.17,
-            "ITL": 163.04
         },
         "7": {
             "USD": 2553,
-            "CHF": 1.669,
-            "GBP": 4.357,
-            "DEM": 1.386,
-            "ATS": 197.07,
-            "ITL": 187.2
         },
         "8": {
             "USD": 2841,
-            "CHF": 1.794,
-            "GBP": 4.823,
-            "DEM": 1.505,
-            "ATS": 214.05,
-            "ITL": 203.35
         },
         "9": {
             "USD": 3176,
-            "CHF": 2.013,
-            "GBP": 5.343,
-            "DEM": 1.7,
-            "ATS": 241.64,
-            "ITL": 227.91
         },
         "10": {
             "USD": 3583,
-            "CHF": 2.323,
-            "GBP": 6.212,
-            "DEM": 1.967,
-            "ATS": 279.59,
-            "ITL": 264.29
         },
         "11": {
             "USD": 415,
-            "CHF": 2.828,
-            "GBP": 7.501,
-            "DEM": 2.373,
-            "ATS": 337.62,
-            "ITL": 319.15
         },
         "12": {
             "USD": 4795,
-            "CHF": 3238,
-            "GBP": 8743,
-            "DEM": 2728,
-            "ATS": 38782,
-            "ITL": 36979
         }
     },
     "1989": {
         "1": {
             "USD": 5526,
-            "CHF": 3548,
-            "GBP": 9814,
-            "DEM": 3018,
-            "ATS": 429.22,
-            "ITL": 410.65
         },
         "2": {
             "USD": 6384,
-            "CHF": 4.053,
-            "GBP": 11.193,
-            "DEM": 3.448,
-            "ATS": 489.81,
-            "ITL": 471.02
         },
         "3": {
             "USD": 7911,
-            "CHF": 4.916,
-            "GBP": 13.559,
-            "DEM": 4.235,
-            "ATS": 602.03,
-            "ITL": 576.64
         },
         "4": {
             "USD": 9456,
-            "CHF": 5.745,
-            "GBP": 16.084,
-            "DEM": 5.058,
-            "ATS": 718.82,
-            "ITL": 689.35
         },
         "5": {
             "USD": 12372,
-            "CHF": 7.156,
-            "GBP": 20.143,
-            "DEM": 6.35,
-            "ATS": 903.02,
-            "ITL": 872.92
         },
         "6": {
             "USD": 15693,
-            "CHF": 9.181,
-            "GBP": 24.363,
-            "DEM": 7.918,
-            "ATS": 1.126,
-            "ITL": 1.093
         },
         "7": {
             "USD": 19102,
-            "CHF": 11.699,
-            "GBP": 30.937,
-            "DEM": 10.07,
-            "ATS": 1.433,
-            "ITL": 1.393
         },
         "8": {
             "USD": 25596,
-            "CHF": 15.408,
-            "GBP": 40.811,
-            "DEM": 13.28,
-            "ATS": 1.885,
-            "ITL": 1.848
         },
         "9": {
             "USD": 32498,
-            "CHF": 19.294,
-            "GBP": 51.179,
-            "DEM": 16.69,
-            "ATS": 2.369,
-            "ITL": 2.318
         },
         "10": {
             "USD": 42095,
-            "CHF": 25.825,
-            "GBP": 66.866,
-            "DEM": 22.569,
-            "ATS": 3.209,
-            "ITL": 3.078
         },
         "11": {
             "USD": 62580,
-            "CHF": 38.623,
-            "GBP": 98.361,
-            "DEM": 34.219,
-            "ATS": 4.86,
-            "ITL": 4.658
         },
         "12": {
             "USD": 107003,
-            "CHF": 68.546,
-            "GBP": 171.351,
-            "DEM": 61.795,
-            "ATS": 8.771,
-            "ITL": 8.315
         }
     }
 }
@@ -2532,11 +2398,11 @@ function calculateInflationAdjustedValue(amount, year) {
             const amount = parseFloat(removeCommas(document.getElementById('amount').value));
 
             const usdValue = convertFromDinars(amount, isNewDinar, year, month);
-            const adjustedValue = calculateInflationAdjustedValue(usdValue, year);
+            const adjustedValue = convertDollarToEuro(calculateInflationAdjustedValue(usdValue, year));
 
             const formatter = new Intl.NumberFormat('en-US', {
                 style: 'currency',
-                currency: 'USD',
+                currency: 'EUR',
 
             });
             document.getElementById('result').innerHTML = `Današnja vrednost: ≈ ${formatter.format(adjustedValue)}`;
