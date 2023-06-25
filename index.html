@@ -2403,6 +2403,7 @@ function calculateInflationAdjustedValue(amount, year) {
             const formatter = new Intl.NumberFormat('en-US', {
                 style: 'currency',
                 currency: 'EUR',
+                maximumFractionDigits: 0
 
             });
             document.getElementById('result').innerHTML = `Današnja vrednost: ≈ ${formatter.format(adjustedValue)}`;
