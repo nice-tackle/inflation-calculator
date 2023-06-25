@@ -2396,10 +2396,10 @@ function calculateInflationAdjustedValue(amount, year) {
               <p>Poznati primeri iz domaćih serija i filmova:</p>
 
               <ul>
-                <li>Gigina pravnička plata umanjena za 10% jer nema položen pravosudni ispit iznosi 12 miliona i 200 hiljada starih dinara u seriji Bolji Život - Januar 1987 ≈ <strong>€665 </strong></li>
-                <li>Nasledstvo u iznosu od 2 milijarde u seriji Bolji Život - Januar 1987 ≈ <strong>€108,986 </strong> </li>
-                <li>Gigin dug od 180 miliona majstoru Macoli u seriji Bolji Život - Februar 1987 ≈ <strong>€9,286</strong></li>
-                <li>Glavna premija od 13 pogodaka na sportskoj prognozi iznosi 650 miliona u Tesnoj Koži 1 - Septembar 1982 ≈ <strong>€363,880</strong> </li>
+                <li>Gigina pravnička plata umanjena za 10% jer nema položen pravosudni ispit iznosi 12 miliona i 200 hiljada starih dinara u seriji Bolji Život - Januar 1987 ≈ <strong>665 € </strong></li>
+                <li>Nasledstvo u iznosu od 2 milijarde u seriji Bolji Život - Januar 1987 ≈ <strong>108,986 € </strong> </li>
+                <li>Gigin dug od 180 miliona majstoru Macoli u seriji Bolji Život - Februar 1987 ≈ <strong>9,286 €</strong></li>
+                <li>Glavna premija od 13 pogodaka na sportskoj prognozi iznosi 650 miliona u Tesnoj Koži 1 - Septembar 1982 ≈ <strong>363,880 €</strong> </li>
               </ul>
 
               
@@ -2461,7 +2461,7 @@ function calculateInflationAdjustedValue(amount, year) {
             const usdValue = convertFromDinars(amount, isNewDinar, year, month);
             const adjustedValue = convertDollarToEuro(calculateInflationAdjustedValue(usdValue, year));
 
-            const formatter = new Intl.NumberFormat('en-US', {
+            const formatter = new Intl.NumberFormat('de-DE', {
                 style: 'currency',
                 currency: 'EUR',
                 maximumFractionDigits: 0
