@@ -2327,7 +2327,41 @@ function calculateInflationAdjustedValue(amount, year) {
             padding: 20px;
             align-items: center;
             justify-content: center;
-            
+        }
+
+        #examples {
+            border-top: 2px solid #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            margin: 20px 0;
+            padding: 15px 0;
+            background-color: #f8f8f8;
+            font-style: italic;
+        }
+
+        #examples ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            text-align: left;
+            padding-left: 20px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Making it mobile-friendly */
+        @media screen and (max-width: 768px) {
+            input, select, button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .calculator-container {
+                padding: 15px;
+            }
+
+            #examples ul {
+                max-width: 100%;
+                padding-left: 10px;
+            }
         }
 
     </style>
@@ -2343,6 +2377,19 @@ function calculateInflationAdjustedValue(amount, year) {
 
         <h4>Izračunaj današnju približnu vrednost jugoslovenskog dinara iz perioda 1966-1989
         </h4>
+
+
+        <div id="examples">
+              <p>Poznati primeri iz domaćih serijama i filmova:</p>
+
+              <ul>
+                <li>Nasledstvo u iznosu od 2 milijarde u seriji Bolji Život - Januar 1987 ≈ €108,986  </li>
+                <li>Gigin dug od 180 miliona majstoru Macoli u seriji Bolji Život - Februar 1987 ≈ €9,286</li>
+                <li>Glavna premija od 13 podataka na sportskoj prognozi iznosi 650 miliona u Tesnoj Koži 1 - Septembar 1982 ≈ €363,880</li>
+              </ul>
+
+              
+        </div>
         <label for="amount">Vrednost:</label>
         <input oninput="formatInput()" type="text" id="amount" value="2,000,000,000">
 
